@@ -31,6 +31,7 @@ import About from "./Components/About/About"
 import Contacts from "./Components/Contacts/Contacts"
 import Gallery from "./Components/Gallery/Gallery"
 import Navbar from "./Components/Navbar/Navbar"
+import Parent from "./Components/Parent/Parent"
 
 
 export default class App extends Component {
@@ -44,6 +45,7 @@ export default class App extends Component {
       <Contacts />
       <Gallery />
       <Navbar />
+      <Parent />
     </>
   }
 }
