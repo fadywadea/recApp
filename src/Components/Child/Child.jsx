@@ -16,8 +16,15 @@ export default class Child extends Component {
             <h5>Price : {price}</h5>
             {onSale === true ? <div className="text-white top-0 end-0 position-absolute bg-danger p-2">sale</div> : ''}
             <button onClick={() => this.props.delete(id)} className="btn btn-outline-danger btn-sm w-100">Delete</button>
+            <button onClick={() => this.props.update(this.props.productIndex, 1)} className="btn btn-outline-info btn-sm my-2 w-100">+</button>
+            <button onClick={() => this.props.update(this.props.productIndex, -1)} className="btn btn-outline-warning btn-sm w-100">-</button>
+            {/* <button onClick={() => this.props.mins(this.props.productIndex )} className="btn btn-outline-warning btn-sm w-100">-</button> */}
           </div>
         </div>
       </>)
+  };
+
+  componentWillUnmount() {
+    console.log("Child componentWillUnmount");
   }
 }
