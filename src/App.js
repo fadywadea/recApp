@@ -101,17 +101,26 @@ import Contacts from './Components/Contacts/Contacts'
 import Gallery from './Components/Gallery/Gallery'
 import Parent from './Components/Parent/Parent'
 import Products2 from './Components/Products/Products'
+import Notfound from './Components/Notfound/Notfound'
+import Mobile from './Components/Mobile/Mobile'
+import Web from './Components/Web/Web'
 
 let routers = createBrowserRouter([
   {
     path: '', element: <Layout />, children: [
-      { path: 'home', element: <Home /> },
+      { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'child', element: <Child /> },
       { path: 'contacts', element: <Contacts /> },
-      { path: 'gallery', element: <Gallery /> },
+      {
+        path: 'gallery', element: <Gallery />, children: [
+          { index: true, element: <Mobile /> },
+          { path: 'web', element: <Web /> },
+        ]
+      },
       { path: 'parent', element: <Parent /> },
       { path: 'products', element: <Products2 /> },
+      { path: '*', element: <Notfound /> },
     ]
   }
 ])
