@@ -50,11 +50,11 @@ export default class App extends Component {
   }
   deleteProduct = (deleteId) => {
     // Deep Copy
-    let myProducts = [...this.state.products];
+    let products = [...this.state.products];
     // Update Copy //  filter
-    myProducts = myProducts.filter((product) => product.id !== deleteId);
+    products = products.filter((product) => product.id !== deleteId);
     //SetStat
-    this.setState({ products: myProducts });
+    this.setState({ products});
   }
   render() {
     return <>
