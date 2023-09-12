@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 export default class Contacts extends Component {
+  state = {
+    
+  };
+
   render() {
     return <div>
       <h2>Contacts</h2>

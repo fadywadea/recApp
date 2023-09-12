@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 export default class Gallery extends Component {
+  state = {
+
+  };
+  
   render() {
     return <div>
       <h2>Gallery</h2>
